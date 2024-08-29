@@ -24,7 +24,7 @@ export default function Work() {
   ];
 
   return (
-    <section className=" bg-[#1C1A1F] px-4 mt-20">
+    <section className=" bg-[#1C1A1F] mt-20">
       <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="max-w-xl lg:w-1/2">
