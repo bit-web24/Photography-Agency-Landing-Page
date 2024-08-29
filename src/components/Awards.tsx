@@ -2,30 +2,12 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Headline, CardTitle, CardDescription } from "@/components/ui/WorkCard";
 import { MdArrowBack, MdArrowForward, MdArrowForwardIos, MdArrowRight, MdArrowRightAlt, MdSkipNext } from "react-icons/md";
-
-const awardsData = [
-    {
-        year: "2015",
-        title: "Sony World Photography Awards",
-    },
-    {
-        year: "2017",
-        title: "Travel Photographer Of The Year",
-    },
-    {
-        year: "2022",
-        title: "Magnum Photography Awards",
-    },
-    {
-        year: "2023",
-        title: "International Photography Awards",
-    },
-];
+import { awardsData } from "../../constants";
 
 const Award = () => {
     return (
         <section className="bg-[#1C1A1F] pt-10 text-white mt-20">
-            <CardDescription className="py-4 text-[#808080]">(04) <br/> Awards</CardDescription>
+            <CardDescription className="py-4 text-[#808080]">(04) <br /> Awards</CardDescription>
             <div className="flex flex-col lg:flex-row justify-end items-start mb-12">
                 <div className="max-w-xl">
                     <Headline className="text-left">
@@ -59,7 +41,7 @@ const Award = () => {
                         alt="A Quiet Afternoon in the Countryside"
                         className="w-full h-1/2 rounded-2xl mx-auto"
                     />
-                    <CardTitle className="py-4">A Quiet Morning in the Countryside</CardTitle>
+                    <CardTitle className="py-4">A Quiet Afternoon in the Countryside</CardTitle>
                     <CardDescription className="text-[#808080]">
                         As the sun gently descends in the western sky, casting a warm golden glow upon the rolling hills and meadows, the countryside settles into a tranquil serenity.
                     </CardDescription>

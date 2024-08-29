@@ -1,31 +1,14 @@
 import { Button, Tag } from "@/components/ui/WorkButton";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardOverlay, Headline } from "@/components/ui/WorkCard";
 import { MdArrowForward } from "react-icons/md";
+import { cards } from "../../constants";
 
 export default function Work() {
-  const cards = [
-    {
-      image: "/card/card1.jpg",
-      title: "Majestic Creatures of the African Savanna",
-      description:
-        "Capturing the exquisite patterns and dynamic energy of Africa’s most iconic big cat.",
-      tags: ["Wildlife Portraits", "Nature", "Mammals", "#2023", "#2023", "#2023", "#2023"],
-    },
-    {
-      image: "/card/card2.jpg",
-      title: "A Temple’s Serene Silhouette",
-      tags: ["Nature", "Architecture", "#2023", , "#2023", "#2023", "#2023"],
-    },
-    {
-      image: "/card/card3.jpg",
-      title: "Moments Framed in Portraits",
-      tags: ["Portraits", "Art", "#2023", "Architecture", "Architecture"],
-    },
-  ];
+ 
 
   return (
-    <section className=" bg-[#1C1A1F] px-4 mt-20">
-      <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
+    <section className=" bg-[#1C1A1F] mt-20">
+      <CardDescription className="py-4 text-[#808080]"> (03) <br /> Our Work</CardDescription>
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="max-w-xl lg:w-1/2">
           <Headline>
