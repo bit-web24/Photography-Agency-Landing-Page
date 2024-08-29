@@ -4,22 +4,9 @@ import { MdArrowForward } from "react-icons/md";
 import { cards } from "../../constants";
 
 export default function Work() {
- 
-
   return (
-    <section className=" bg-[#1C1A1F] mt-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <section className="bg-[#1C1A1F] mt-20">
       <CardDescription className="py-4 text-[#808080]"> (03) <br /> Our Work</CardDescription>
-=======
-      <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
->>>>>>> master
-=======
-      <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
-=======
-      <CardDescription className="py-4 text-[#808080]"> (03) <br /> Our Work</CardDescription>
->>>>>>> 8914adc (update word and ward data opbject path)
->>>>>>> b1f158b (update word and ward data opbject path)
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="max-w-xl lg:w-1/2">
           <Headline>
@@ -32,8 +19,10 @@ export default function Work() {
             Each image in our portfolio reflects our dedication to preserving life’s beauty and significance.
           </CardDescription>
           <div className="buttons flex flex-row">
-            <button className=" text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Exlpore More </button>
-            <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]"> <MdArrowForward size={24} color="#000000" /></button>
+            <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
+            <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
+              <MdArrowForward size={24} color="#000000" />
+            </button>
           </div>
         </div>
       </div>
