@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+  background-color: #1C1A1F;
+}
+
+@layer utilities {
+  .btn_white {
+    @apply border-white bg-white px-8 py-3 text-green-50
+  }
+
+  .btn_white_text {
+    @apply border-white backdrop-blur-sm px-8 py-3 text-white;
+    /* Correct Tailwind class */
+  }
+
+  .btn_green {
+    @apply border-white backdrop-blur-sm px-8 py-2 text-white;
+    /* Example for green button */
+  }
+
+  .btn_dark_green {
+    @apply bg-white px-8 py-4 text-black transition-all hover:bg-gray-100 cursor-default;
+  }
+
+  .btn_dark_green_outline {
+    @apply border-gray-200 bg-green-900 px-8 py-5 text-white;
+  }
+
+
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 2xl:px-0;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  /* FONTS */
+  .regular-64 {
+    @apply text-[64px] font-[400] leading-[120%];
+  }
+
+  .regular-40 {
+    @apply text-[40px] font-[400] leading-[120%];
+  }
+
+  .regular-32 {
+    @apply text-[32px] font-[400];
+  }
+
+  .regular-24 {
+    @apply text-[24px] font-[400];
+  }
+
+  .regular-20 {
+    @apply text-[20px] font-[400];
+  }
+
+  .regular-18 {
+    @apply text-[18px] font-[400];
+  }
+
+  .regular-16 {
+    @apply text-[16px] font-[400];
+  }
+
+  .regular-14 {
+    @apply text-[14px] font-[400];
+  }
+
+  .medium-14 {
+    @apply text-[14px] font-[600];
+  }
+
+  .bold-88 {
+    @apply text-[88px] font-[700] leading-[120%];
+  }
+
+  .bold-64 {
+    @apply text-[64px] font-[700] leading-[120%];
+  }
+
+  .bold-52 {
+    @apply text-[52px] font-[700] leading-[120%];
+  }
+
+  .bold-40 {
+    @apply text-[40px] font-[700] leading-[120%];
+  }
+
+  .bold-32 {
+    @apply text-[32px] font-[700] leading-[120%];
+  }
+
+  .bold-20 {
+    @apply text-[20px] font-[700];
+  }
+
+  .bold-18 {
+    @apply text-[18px] font-[700];
+  }
+
+  .bold-16 {
+    @apply text-[16px] font-[700];
+  }
+
+  .hero-map {
+    @apply absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60;
+  }
+
+  /* Camp */
+  /* .camp-quote {
+    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
+  } */
+
+  /* Feature */
+  .feature-phone {
+    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex 3xl:left-20;
+  }
+
+  /* Get App */
+  .get-app {
+    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@layer components {
+  .custom-h1 {
+    @apply text-9xl lg:text-[55px] text-white leading-[1.8] xl:leading-[1.8];
+  }
+
+  @media (min-width: 640px) {
+
+    /* sm */
+    .custom-h1 {
+      @apply text-5xl;
+      /* Larger text on small tablets and larger screens */
+      margin-top: 6rem;
+      /* Adjust margin for larger screens */
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    /* md */
+    .custom-h1 {
+      @apply text-6xl;
+      /* Even larger text on medium tablets and larger screens */
+      margin-top: 8rem;
+      /* Further adjust margin */
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    /* lg */
+    .custom-h1 {
+      @apply text-7xl;
+      /* Larger text on large desktops */
+      margin-top: 10rem;
+      /* Larger margin on larger screens */
+    }
+  }
+
+  @media (min-width: 1280px) {
+
+    /* xl */
+    .custom-h1 {
+      @apply text-[55px];
+      /* Specific text size for extra-large screens */
+      margin-top: 12rem;
+      /* Larger margin for extra-large screens */
+      text-align: left;
+      /* Align text to the left on extra-large screens */
+    }
+  }
+
+
+  @media (max-width: 640px) {
+    .h-hero {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    .h-hero {
+      height: 600px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .h-hero {
+      height: 700px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .h-hero {
+      height: 800px;
+    }
+  }
+
+  /* Media query for mobile responsiveness */
+  @media (max-width: 640px) {
+    .flex-col {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Ensure the image section is centered */
+    .relative.z-20.flex-col {
+      margin-top: 0;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+
+    /* Center the text on mobile */
+    h1.custom-h1 {
+      margin-top: 16px;
+      font-size: 24px;
+    }
+
+    .mt-32 {
+      margin-top: 0;
+    }
+
+    .flex-space {
+      justify-content: center;
+    }
+  }
+}
