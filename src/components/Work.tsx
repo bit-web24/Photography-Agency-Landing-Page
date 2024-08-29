@@ -9,10 +9,17 @@ export default function Work() {
   return (
     <section className=" bg-[#1C1A1F] mt-20">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CardDescription className="py-4 text-[#808080]"> (03) <br /> Our Work</CardDescription>
 =======
       <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
 >>>>>>> master
+=======
+      <CardDescription className="py-4 text-[#808080]"> (03) <br/> Our Work</CardDescription>
+=======
+      <CardDescription className="py-4 text-[#808080]"> (03) <br /> Our Work</CardDescription>
+>>>>>>> 8914adc (update word and ward data opbject path)
+>>>>>>> b1f158b (update word and ward data opbject path)
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="max-w-xl lg:w-1/2">
           <Headline>
