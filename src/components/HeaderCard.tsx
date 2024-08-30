@@ -6,8 +6,8 @@ import { carouselData } from "../../constants";
 
 const HeaderCard = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const carouselRef = useRef(null);
+  const [currentItemIndex, setCurrentItemIndex] = useState(1);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const totalItems = carouselData.length;
 
@@ -19,12 +19,12 @@ const HeaderCard = () => {
 
         if (maxScrollLeft > 0) {
           const scrollFraction = scrollLeft / maxScrollLeft;
-          const newIndex = Math.floor(scrollFraction * totalItems);
-          setCurrentItemIndex(newIndex);
+          setScrollProgress(scrollFraction * 100);
 
-          const progressInItem = (scrollLeft % clientWidth) / clientWidth;
-          const fullHighlightProgress = (scrollFraction + progressInItem / totalItems) * 100;
-          setScrollProgress(Math.min(fullHighlightProgress, 100));
+          // Calculate the visible item index based on scroll position
+          const itemWidth = clientWidth; // Assuming each item takes full width
+          const visibleItemIndex = Math.floor(scrollLeft / itemWidth) + 1;
+          setCurrentItemIndex(Math.min(visibleItemIndex, totalItems));
         }
       }
     };
@@ -41,23 +41,11 @@ const HeaderCard = () => {
     };
   }, [totalItems]);
 
-  const scrollToIndex = (index) => {
-    if (carouselRef.current) {
-      const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
-      carouselRef.current.scrollTo({
-        left: itemWidth * index,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <>
       {/* Highlight section */}
       <div className="flex items-center justify-between w-full relative mb-4">
-        <span className="text-sm font-medium text-white">
-          {String(currentItemIndex + 1).padStart(2, '0')}
-        </span>
+        <span className="text-sm font-medium text-white">01</span>
         <div className="relative flex-1 mx-4">
           <hr className="absolute inset-0 border-t-2 border-gray-400" />
           {/* Highlight bar */}
@@ -69,7 +57,7 @@ const HeaderCard = () => {
           />
         </div>
         <span className="text-sm font-medium text-white">
-          {String(currentItemIndex + 1).padStart(2, '0')}
+          {String(currentItemIndex).padStart(2, '0')}
         </span>
       </div>
 
