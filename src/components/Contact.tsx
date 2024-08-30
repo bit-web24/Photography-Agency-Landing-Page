@@ -38,7 +38,7 @@ export default function Contact() {
                     <p>Cityville, MA 56789,</p>
                     <p>United States</p>
                     <p>+1 (555) 123-4567</p>
-                    <p>creacy@hello.com</p>
+                    <p>CeelestialUI@hello.com</p>
                 </div>
             </div>
         </div>

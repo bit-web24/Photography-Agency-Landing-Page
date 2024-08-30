@@ -43,7 +43,7 @@ body {
   }
 
   .btn_dark_green {
-    @apply bg-white px-6 py-3 text-black transition-all hover:bg-[#7f7f81] cursor-default;
+    @apply bg-white px-6 py-3 text-black transition-all hover:bg-[#7f7f81] cursor-default shadow-md focus:outline-none  transform hover:scale-95 active:scale-95;
   }
 
 
@@ -285,12 +285,12 @@ body {
     }
   }
 }
-/* Hide scrollbar but still allow scrolling */
+
 .scrollbar-hidden {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none; 
 }
 

@@ -15,9 +15,9 @@ const Navbar = () => {
     <nav className="flexBetween max-container px-10 py-5 relative top-0 left-0 right-0 z-30 bg-gradient-to-b from-transparent to-transparent">
       <div className="flex items-center space-x-2">
         <Link href="/">
-          <img src="/logo.png" alt="CREACY" className="rounded-2xl w-12 h-12" />
+          <img src="/logo.png" alt="CeelestialUI" className="rounded-2xl w-12 h-12" />
         </Link>
-        <p className="text-[#ffffff] text-lg font-semibold">CREACY</p>
+        <p className="text-[#ffffff] text-lg font-semibold">CeelestialUI</p>
       </div>
 
       {/* Desktop Links */}
@@ -40,19 +40,24 @@ const Navbar = () => {
 
       {/* Right Section */}
       <div className="lg:flex hidden items-center">
-        <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
-        <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-[#7f7f81] focus:outline-none ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6 text-gray-800"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
-          </svg>
-        </button>
-      </div>
+  <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
+  <button
+    className="relative w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-[#7f7f81] focus:outline-none transition-transform transform hover:scale-110 active:scale-95"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      className="h-6 w-6 text-gray-800 transition-transform duration-300 ease-in-out"
+      style={{ transition: 'transform 0.3s ease-in-out' }}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
+    </svg>
+  </button>
+</div>
+
+
 
       {/* Mobile Menu Button */}
       <div className="lg:hidden flex items-center">
