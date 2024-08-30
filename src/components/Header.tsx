@@ -12,7 +12,7 @@ const Header = () => {
           moment inside lens and <br className="hidden sm:inline" />
           shutterspeed
         </h1>
-        <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-44">
+        <div className="flex flex-col w-full sm:w-auto mt-64 md:mt-36 lg:mt-38 xl:mt-32">
           <div className="flex flex-wrap gap-2 sm:gap-3">
             <HeaderButton type="button" title="Landscape" variant="btn_white_text" />
             <HeaderButton type="button" title="Wildlife" variant="btn_white_text" />
