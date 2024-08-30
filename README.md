@@ -10,9 +10,3 @@ Photography Agency Landing Page
 
 # Design
 ![design](./public/design.png)
-
-# Responsibilities
-1. Shivam: `our work` and `awards` section.
-2. Raushan: `about us` and `expertise` section.
-3. Krishna:  `navbar` and `main header` section.
-4. Bittu: `contact us` and `footer section`

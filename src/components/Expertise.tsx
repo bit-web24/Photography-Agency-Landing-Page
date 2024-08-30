@@ -80,7 +80,7 @@ const Expertise = () => {
                       <div className="p-1">
                         <Card>
                           <CardContent className="flex aspect-square items-center justify-center p-2">
-                              <img src={data} className="h-full w-full"/>
+                              <img src={data} className="h-full w-full rounded-xl"/>
                           </CardContent>
                         </Card>
                       </div>
@@ -92,7 +92,7 @@ const Expertise = () => {
               </Carousel>
 
               <div className="mt-12  flex flex-row align-middle ">
-                <span className="text-[25px]">see all</span> <span><MdArrowRightAlt className="h-10 w-16" /></span>
+                <span className="text-[25px]">See all</span> <span><MdArrowRightAlt className="h-10 w-16" /></span>
               </div>
             </div>
           </div>
