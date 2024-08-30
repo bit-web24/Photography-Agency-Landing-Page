@@ -12,7 +12,7 @@ import "./globals.css";
 export default function Home() {
   return (
     <>
-      <div className="overflow-hidden relative bg-cover bg-center my-7 h-[655px] rounded-2xl before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-20" style={{ backgroundImage: "url('/header-bg.jpg')" }}>
+       <div className="overflow-hidden relative bg-cover bg-center my-7 h-[670px] rounded-2xl before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-20 bg-bg-img-1">
         <Navbar />
         <Header />
       </div>

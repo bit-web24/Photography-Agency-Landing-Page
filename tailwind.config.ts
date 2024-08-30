@@ -14,7 +14,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-         "bg-img-1" : "url('/pic2.jpg')",
+         "bg-img-1" : "url('/header-bg.jpg')",
       },
        screens: {
         'tablet': '640px',  

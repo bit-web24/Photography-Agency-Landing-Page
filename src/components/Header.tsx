@@ -1,5 +1,7 @@
 import React from "react";
 import HeaderButton from "./ui/HeaderButton";
+import HeaderCard from "./HeaderCard";
+
 
 const Header = () => {
   return (
@@ -10,9 +12,9 @@ const Header = () => {
           moment inside lens and <br className="hidden sm:inline" />
           shutterspeed
         </h1>
-        <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-32">
+        <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-44">
           <div className="flex flex-wrap gap-2 sm:gap-3">
-            <HeaderButton type="button" title="Landscape" variant="btn_green" />
+            <HeaderButton type="button" title="Landscape" variant="btn_white_text" />
             <HeaderButton type="button" title="Wildlife" variant="btn_white_text" />
           </div>
           <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
@@ -25,6 +27,9 @@ const Header = () => {
             <HeaderButton type="button" title="Portrait" variant="btn_white_text" />
           </div>
         </div>
+      </div>
+      <div className="mt-80">
+      <HeaderCard/>
       </div>
     </section>
   );
