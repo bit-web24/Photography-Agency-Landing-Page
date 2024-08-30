@@ -6,8 +6,8 @@ import { carouselData } from "../../constants";
 
 const HeaderCard = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [currentItemIndex, setCurrentItemIndex] = useState(1);
-  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const carouselRef = useRef(null);
 
   const totalItems = carouselData.length;
 
@@ -22,9 +22,11 @@ const HeaderCard = () => {
           setScrollProgress(scrollFraction * 100);
 
           // Calculate the visible item index based on scroll position
-          const itemWidth = clientWidth; // Assuming each item takes full width
-          const visibleItemIndex = Math.floor(scrollLeft / itemWidth) + 1;
-          setCurrentItemIndex(Math.min(visibleItemIndex, totalItems));
+          const visibleItemIndex = Math.min(
+            Math.floor((scrollLeft / maxScrollLeft) * (totalItems - 1)),
+            totalItems - 1
+          );
+          setCurrentItemIndex(visibleItemIndex);
         }
       }
     };
@@ -32,6 +34,8 @@ const HeaderCard = () => {
     const carouselElement = carouselRef.current;
     if (carouselElement) {
       carouselElement.addEventListener("scroll", handleScroll);
+      // Initial calculation
+      handleScroll();
     }
 
     return () => {
@@ -41,29 +45,41 @@ const HeaderCard = () => {
     };
   }, [totalItems]);
 
+  const scrollToIndex = (index) => {
+    if (carouselRef.current) {
+      const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
+      carouselRef.current.scrollTo({
+        left: itemWidth * index,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       {/* Highlight section */}
       <div className="flex items-center justify-between w-full relative mb-4">
-        <span className="text-sm font-medium text-white">01</span>
+        <span className="text-sm font-medium text-white">
+          {String(currentItemIndex + 1).padStart(2, '0')}
+        </span>
         <div className="relative flex-1 mx-4">
           <hr className="absolute inset-0 border-t-2 border-gray-400" />
           {/* Highlight bar */}
           <div
-            className="absolute bg-white h-[2px] rounded-full border-t-4 transition-all duration-300"
+            className="absolute bg-white h-[2px] rounded-full transition-all duration-300"
             style={{
               width: `${scrollProgress}%`,
             }}
           />
         </div>
         <span className="text-sm font-medium text-white">
-          {String(currentItemIndex).padStart(2, '0')}
+          {String(totalItems).padStart(2, '0')}
         </span>
       </div>
 
       {/* Carousel */}
-      <Carousel opts={{ align: "start" }} className="w-sm max-w-[350px] h-44">
-        <CarouselContent ref={carouselRef} className="carousel-container flex space-x-2 overflow-x-auto">
+      <Carousel opts={{ align: "start" }} className="w-full max-w-[350px] h-44">
+        <CarouselContent ref={carouselRef} className="carousel-container flex space-x-2">
           {carouselData.map((item, index) => (
             <CarouselItem key={index} className="w-[350px] flex-shrink-0 carousel-item">
               <div className="flex flex-col md:flex-row p-2 rounded-md h-32 btn_white cursor-pointer">
