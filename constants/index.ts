@@ -45,3 +45,21 @@ export const awardsData = [
       title: "International Photography Awards",
   },
 ];
+
+export const carouselData = [
+  { 
+    imgSrc: '/pic1.jpeg', 
+    title: 'Lonely Life at the Baltimore', 
+    description: 'Shoot with Sony a6000' 
+  },
+  { 
+    imgSrc: '/pic2.jpg', 
+    title: 'Sunny Days in California', 
+    description: 'Shoot with Sony a6000' 
+  },
+  { 
+    imgSrc: '/pic1.jpeg', 
+    title: 'Adventures in the Mountains', 
+    description: 'Shoot with Sony a6000' 
+  }
+];
