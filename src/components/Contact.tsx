@@ -13,8 +13,10 @@ export default function Contact() {
                     </div>
                     <div className="text-3xl sm:text-5xl text-gray-400 flex flex-wrap items-center">
                         vision
-                        <span className="ml-0 sm:ml-4 mt-2 sm:mt-0 text-xl sm:text-2xl font-mono text-black bg-white rounded-full px-3 sm:px-5 py-2 sm:py-3">LET'S TALK</span>
-                        <button className="w-12 h-12 sm:w-16 sm:h-16 mt-2 sm:mt-0 mr-2 inline-flex items-center justify-center px-3 sm:px-4 py-1 sm:py-2 bg-white text-gray-900 font-semibold rounded-full shadow-md hover:bg-gray-200 focus:outline-none">
+                        <button className="ml-0 sm:ml-4 mt-2 sm:mt-0 text-xl sm:text-2xl font-mono text-black bg-white rounded-full px-3 sm:px-5 py-2 sm:py-3 hover:bg-[#e3e3e3] focus:outline-none transform hover:scale-95 active:scale-95 transition-all shadow-md">
+                            LET'S TALK
+                        </button>
+                        <button className="w-12 h-12 sm:w-16 sm:h-16 mt-2 sm:mt-0 ml-0 inline-flex items-center justify-center px-3 sm:px-4 py-1 sm:py-2 bg-white text-gray-900 font-semibold rounded-full shadow-md focus:outline-none cursor-default">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"

@@ -19,7 +19,7 @@ export default function Work() {
             Each image in our portfolio reflects our dedication to preserving life’s beauty and significance.
           </CardDescription>
           <div className="buttons flex flex-row">
-            <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
+            <button className=" text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080] focus:outline-none transform hover:scale-95 active:scale-95 transition-all shadow-md">Explore More</button>
             <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
               <MdArrowForward size={24} color="#000000" />
             </button>
