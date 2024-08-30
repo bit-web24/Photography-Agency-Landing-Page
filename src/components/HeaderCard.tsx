@@ -6,7 +6,7 @@ import { carouselData } from "../../constants";
 
 const HeaderCard = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [currentItemIndex, setCurrentItemIndex] = useState(3); // Start at 3 to match your example
+  const [currentItemIndex, setCurrentItemIndex] = useState(3); 
   const carouselRef = useRef(null);
 
   const totalItems = carouselData.length;
