@@ -21,12 +21,12 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <ul className="hidden lg:flex gap-6 items-center rounded-full bg-[#9e9e9edc] p-3 px-7">
+      <ul className="hidden lg:flex gap-6 items-center rounded-full bg-[#bebebedc] p-3 px-4">
         {NAV_LINKS.map((link, index) => (
           <li key={link.key} className="flex items-center">
             <Link
               href={link.href}
-              className="pr-5 text-[#ffffff] hover:text-[#1C1A1F] cursor-pointer"
+              className="pr-5 text-[#ffffff] hover:text-[#7f7f81] cursor-pointer"
             >
               {link.label}
             </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
       {/* Right Section */}
       <div className="lg:flex hidden items-center">
         <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
-        <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none ">
+        <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-[#7f7f81] focus:outline-none ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
