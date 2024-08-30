@@ -17,8 +17,8 @@ export default function Home() {
         <Header />
       </div>
 
-      {/* <About /> */}
-      {/* <Expertise /> */}
+      <About />
+      <Expertise />
       <Work />
       <Awards />
       <Footer />
