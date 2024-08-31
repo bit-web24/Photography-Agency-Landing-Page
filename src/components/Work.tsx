@@ -1,7 +1,7 @@
 import { Button, Tag } from "@/components/ui/WorkButton";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardOverlay, Headline } from "@/components/ui/WorkCard";
 import { MdArrowForward } from "react-icons/md";
-import { cards } from "../../constants";
+import { WorkCards } from "../../constants";
 
 export default function Work() {
   return (
@@ -13,13 +13,13 @@ export default function Work() {
             <span className="text-white font-bold">Explore</span> the artistry and precision behind <span className="text-white font-bold">our portfolio</span> of timeless photography
           </Headline>
         </div>
-        <div className="max-w-xl lg:w-1/2 mt-6 lg:mt-0 lg:text-left">
+        <div className="max-w-xl lg:w-1/2 mt-6 lg:mt-0 text-left">
           <CardDescription className="mb-8 text-[#808080]">
             Embark on a visual journey through our cherished moments captured with creativity and precision.
             Each image in our portfolio reflects our dedication to preserving life’s beauty and significance.
           </CardDescription>
           <div className="buttons flex flex-row">
-            <button className=" text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080] focus:outline-none transform hover:scale-95 active:scale-95 transition-all shadow-md">Explore More</button>
+            <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
             <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
               <MdArrowForward size={24} color="#000000" />
             </button>
@@ -32,21 +32,21 @@ export default function Work() {
         {/* First Card */}
         <Card variant="large" className="relative overflow-hidden rounded-2xl">
           <img
-            src={cards[0].image}
-            alt={cards[0].title}
+            src={WorkCards[0].image}
+            alt={WorkCards[0].title}
             className="absolute inset-0 h-full w-full object-cover"
           />
           <CardOverlay>
-            {cards[0].tags && (
+            {WorkCards[0].tags && (
               <div className="absolute top-2 pl-16 right-2 mt-2 flex gap-2 flex-wrap justify-end cursor-pointer">
-                {cards[0].tags.map((tag, i) => (
+                {WorkCards[0].tags.map((tag, i) => (
                   <Tag key={i} className="mr-2">{tag}</Tag>
                 ))}
               </div>
             )}
             <CardHeader>
-              <CardTitle>{cards[0].title}</CardTitle>
-              <CardDescription>{cards[0].description}</CardDescription>
+              <CardTitle>{WorkCards[0].title}</CardTitle>
+              <CardDescription>{WorkCards[0].description}</CardDescription>
             </CardHeader>
             <CardFooter className="justify-center">
               <Button variant="outline" className="text-white hover:bg-white hover:text-black">
@@ -57,7 +57,7 @@ export default function Work() {
         </Card>
 
         {/* Other Cards */}
-        {cards.slice(1).map((card, index) => (
+        {WorkCards.slice(1).map((card, index) => (
           <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl">
             <img
               src={card.image}
