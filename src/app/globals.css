@@ -286,11 +286,26 @@ body {
   }
 }
 
-.scrollbar-hidden {
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-}
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none; 
+
+
+.carousel-container::-webkit-scrollbar {
+  width: 0;
+  height: 0; 
 }
 
+
+.carousel-container {
+  overflow-x: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  scroll-behavior: smooth; 
+}
+
+
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); 
+}
+.carousel-item {
+  flex: 0 0 auto; 
+}
