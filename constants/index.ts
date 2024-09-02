@@ -2,9 +2,9 @@
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     
-    { href: '/', key: 'service', label: 'Service' },
-    { href: '/', key: 'Projects ', label: 'Projects' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
+    { href: '/', key: 'Product', label: 'Product' },
+    { href: '/Contribute', key: 'About', label: 'About' },
+    { href: '/', key: 'Template UI', label: 'Template UI' },
   ];
 
 export const cards = [
@@ -58,7 +58,7 @@ export const carouselData = [
     description: 'Shoot with Sony a6000' 
   },
   { 
-    imgSrc: '/pic1.jpeg', 
+    imgSrc: '/img-1.png', 
     title: 'Adventures in the Mountains', 
     description: 'Shoot with Sony a6000' 
   }
