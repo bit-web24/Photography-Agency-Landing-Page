@@ -105,15 +105,15 @@ const DropdownForm = () => {
           placeholder="Enter any comments"
         />
       </div>
-
       <div className="flex justify-center mt-6">
-        <button
-          type="submit"
-          className="px-4 py-2  bg-[#374151] text-white rounded-md"
-        >
-          Submit
-        </button>
-      </div>
+  <button
+    type="submit"
+    className="px-4 py-2 bg-[#374151] text-white rounded-md transition-all duration-300 ease-in-out transform hover:bg-[#4a4a4a] hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#374151]"
+  >
+    Submit
+  </button>
+</div>
+
     </form>
   );
 };
