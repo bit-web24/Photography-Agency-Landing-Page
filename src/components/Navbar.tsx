@@ -2,10 +2,19 @@
 import { useState } from "react";
 import { NAV_LINKS } from "../../constants";
 import Link from "next/link";
-import Button from "./ui/HeaderButton";
+import HeaderButton from "./ui/HeaderButton";
+import ButtonForm from "./ButtonForm";
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdown, setIsDropdown] = useState(false);
+
+  // Function to toggle icon state
+  const handleIconToggle = () => {
+    setIsDropdown((prevState) => !prevState);
+  };
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -40,10 +49,15 @@ const Navbar = () => {
 
       {/* Right Section */}
       <div className="lg:flex hidden items-center">
-  <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
+      <ButtonForm
+        title="BOOK A CALL" 
+        variant="btn_dark_green" 
+      />
+     
   <div
-    className="relative w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md"
+    className="relative w-12 h-12 inline-flex items-center justify-center bg-white hover:bg-[#7f7f81] rounded-full shadow-md cursor-pointer focus:outline-none  transform hover:scale-95 active:scale-95"
   >
+   
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -53,6 +67,7 @@ const Navbar = () => {
     >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
     </svg>
+    
   </div>
 </div>
 
@@ -133,7 +148,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col items-center gap-4">
-            <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
+            <ButtonForm  title="BOOK A CALL" variant="btn_dark_green" />
             <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
