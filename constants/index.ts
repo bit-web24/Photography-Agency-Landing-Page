@@ -22,8 +22,9 @@ export const carouselData = [
   {
     imgSrc: '/pic1.jpeg',
     title: 'Adventures in the Mountains',
-    description: 'Shoot with Sony a6000'
-  { 
+    description: 'Shoot with Sony a6000',
+  },
+  {
     imgSrc: '/img-1.png', 
     title: 'Adventures in the Mountains', 
     description: 'Shoot with Sony a6000' 
