@@ -43,7 +43,7 @@ body {
   }
 
   .btn_dark_green {
-    @apply bg-white px-6 py-3 text-black transition-all hover:bg-[#7f7f81] cursor-default shadow-md focus:outline-none  transform hover:scale-95 active:scale-95;
+    @apply bg-white px-6 py-3 text-black transition-all hover:bg-[#e3e3e3] cursor-pointer shadow-md focus:outline-none  transform hover:scale-95 active:scale-95;
   }
 
 

@@ -41,20 +41,19 @@ const Navbar = () => {
       {/* Right Section */}
       <div className="lg:flex hidden items-center">
   <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
-  <button
-    className="relative w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-[#7f7f81] focus:outline-none transition-transform transform hover:scale-110 active:scale-95"
+  <div
+    className="relative w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      className="h-6 w-6 text-gray-800 transition-transform duration-300 ease-in-out"
-      style={{ transition: 'transform 0.3s ease-in-out' }}
+      className="h-6 w-6 text-gray-800"
     >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
     </svg>
-  </button>
+  </div>
 </div>
 
 
