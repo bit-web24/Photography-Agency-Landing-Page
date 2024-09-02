@@ -2,7 +2,6 @@ import React from "react";
 import HeaderButton from "./ui/HeaderButton";
 import HeaderCard from "./HeaderCard";
 
-
 const Header = () => {
   return (
     <section className="max-container px-4 sm:px-6 md:px-10 flex flex-col gap-10 sm:gap-16 md:gap-20 py-6 sm:py-8 md:py-10 pb-16 sm:pb-24 md:pb-32 lg:gap-28 xl:flex-row">
@@ -13,23 +12,44 @@ const Header = () => {
           shutterspeed
         </h1>
         <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-44">
-          <div className="flex flex-wrap gap-2 sm:gap-3">
-            <HeaderButton type="button" title="Landscape" variant="btn_white_text" />
-            <HeaderButton type="button" title="Wildlife" variant="btn_white_text" />
-          </div>
-          <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
-            <HeaderButton
-              type="button"
-              title="Architectural"
-              variant="btn_white_text"
-            />
-            <HeaderButton type="button" title="Travel" variant="btn_white_text" />
-            <HeaderButton type="button" title="Portrait" variant="btn_white_text" />
-          </div>
-        </div>
+  {/* First Row of Buttons */}
+  <div className="flex flex-wrap gap-2 sm:gap-3">
+    <HeaderButton 
+      type="button" 
+      title="Landscape" 
+      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
+    />
+    <HeaderButton 
+      type="button" 
+      title="Wildlife" 
+      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
+    />
+  </div>
+  
+  {/* Second Row of Buttons */}
+  <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
+    <HeaderButton 
+      type="button" 
+      title="Architectural" 
+      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
+    />
+    <HeaderButton 
+      type="button" 
+      title="Travel" 
+      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
+    />
+    <HeaderButton 
+      type="button" 
+      title="Portrait" 
+      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
+    />
+  </div>
+</div>
+
       </div>
+      
       <div className="mt-80">
-      <HeaderCard/>
+        <HeaderCard />
       </div>
     </section>
   );

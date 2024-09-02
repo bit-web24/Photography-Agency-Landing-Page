@@ -1,65 +1,79 @@
 // NAVIGATION
 export const NAV_LINKS = [
+  
     { href: '/', key: 'home', label: 'Home' },
     
-    { href: '/', key: 'service', label: 'Service' },
-    { href: '/', key: 'Projects ', label: 'Projects' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
+    { href: '/', key: 'Product', label: 'Product' },
+    { href: '/Contribute', key: 'About', label: 'About' },
+    { href: '/', key: 'Template UI', label: 'Template UI' },
   ];
 
-export const cards = [
+export const carouselData = [
+  {
+    imgSrc: '/pic1.jpeg',
+    title: 'Lonely Life at the Baltimore',
+    description: 'Shoot with Sony a6000'
+  },
+  {
+    imgSrc: '/pic2.jpg',
+    title: 'Sunny Days in California',
+    description: 'Shoot with Sony a6000'
+  },
+  {
+    imgSrc: '/pic1.jpeg',
+    title: 'Adventures in the Mountains',
+    description: 'Shoot with Sony a6000',
+  },
+  {
+    imgSrc: '/img-1.png', 
+    title: 'Adventures in the Mountains', 
+    description: 'Shoot with Sony a6000' 
+  }
+];
+
+export const WorkCards = [
   {
     image: "/card/card1.jpg",
     title: "Majestic Creatures of the African Savanna",
     description:
       "Capturing the exquisite patterns and dynamic energy of Africa’s most iconic big cat.",
-    tags: ["Wildlife Portraits", "Nature", "Mammals", "#2023", "#2023", "#2023", "#2023"],
+    tags: ["Wildlife Portraits", "#Nature", "#Mammals", "#2022", "#Forest", "#2023", "#2024"],
   },
   {
     image: "/card/card2.jpg",
     title: "A Temple’s Serene Silhouette",
-    tags: ["Nature", "Architecture", "#2023", , "#2023", "#2023", "#2023"],
+    tags: ["#Nature", "#Architecture", "#2023", , "#2024"],
   },
   {
     image: "/card/card3.jpg",
     title: "Moments Framed in Portraits",
-    tags: ["Portraits", "Art", "#2023", "Architecture", "Architecture"],
+    tags: ["#Portraits", "#Art", "#2023", "#Architecture"],
   },
 ];
 
 export const awardsData = [
   {
-      year: "2015",
-      title: "Sony World Photography Awards",
+    image: "/awards/sonnyWorld.jpg",
+    year: "2015",
+    title: "Sony World Photography Awards",
+    description: "Recognized for excellence in wildlife photography, capturing the beauty and majesty of the natural world.",
   },
   {
-      year: "2017",
-      title: "Travel Photographer Of The Year",
+    image: "/awards/travel.jpg",
+    year: "2017",
+    title: "Travel Photographer Of The Year",
+    description: "Awarded for stunning landscape photography that transports viewers to the heart of remote destinations.",
   },
   {
-      year: "2022",
-      title: "Magnum Photography Awards",
+    image: "/awards/magnum.jpg",
+    year: "2022",
+    title: "Magnum Photography Awards",
+    description: "Honored for innovative portrait photography that showcases unique perspectives and human stories.",
   },
   {
-      year: "2023",
-      title: "International Photography Awards",
+    image: "/awards/international.jpg",
+    year: "2023",
+    title: "International Photography Awards",
+    description: "Celebrated for groundbreaking architectural photography, capturing the interplay of light and structure.",
   },
-];
-
-export const carouselData = [
-  { 
-    imgSrc: '/pic1.jpeg', 
-    title: 'Lonely Life at the Baltimore', 
-    description: 'Shoot with Sony a6000' 
-  },
-  { 
-    imgSrc: '/pic2.jpg', 
-    title: 'Sunny Days in California', 
-    description: 'Shoot with Sony a6000' 
-  },
-  { 
-    imgSrc: '/pic1.jpeg', 
-    title: 'Adventures in the Mountains', 
-    description: 'Shoot with Sony a6000' 
-  }
 ];

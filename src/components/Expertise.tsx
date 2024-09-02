@@ -78,10 +78,17 @@ const Expertise = () => {
                       className=" "
                     >
                       <div className="p-1">
+<<<<<<< HEAD
                         <Card className="flex items-center justify-center p-2">
                           
                               <img src={data} className="rounded-lg " />
                         
+=======
+                        <Card>
+                          <CardContent className="flex aspect-square items-center justify-center p-2">
+                              <img src={data} className="h-full w-full rounded-xl"/>
+                          </CardContent>
+>>>>>>> cf0809fd2572c6e7dde953ba76c6ac296ff3c81f
                         </Card>
                       </div>
                     </CarouselItem>
@@ -92,7 +99,7 @@ const Expertise = () => {
               </Carousel>
 
               <div className="mt-12  flex flex-row align-middle ">
-                <span className="text-[25px]">see all</span> <span><MdArrowRightAlt className="h-10 w-16" /></span>
+                <span className="text-[25px]">See all</span> <span><MdArrowRightAlt className="h-10 w-16" /></span>
               </div>
             </div>
           </div>
