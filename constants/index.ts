@@ -1,12 +1,45 @@
 // NAVIGATION
 export const NAV_LINKS = [
-  
-    { href: '/', key: 'home', label: 'Home' },
-    
-    { href: '/', key: 'Product', label: 'Product' },
-    { href: '/Contribute', key: 'About', label: 'About' },
-    { href: '/', key: 'Template UI', label: 'Template UI' },
-  ];
+
+  { href: '/', key: 'home', label: 'Home' },
+
+  { href: '/', key: 'Products', label: 'Products' },
+  { href: '/Contribute', key: 'About', label: 'About' },
+  { href: '/', key: 'Template UI', label: 'Template UI' },
+];
+
+export const products = [
+  {
+    title: "Technology lookup",
+    description: "Find out what websites are built with",
+    icon: "🔍",
+  },
+  {
+    title: "Lead lists",
+    description: "Create a list of sites for a technology, keyword, or domain",
+    icon: "📑",
+  },
+  {
+    title: "Email verification",
+    description: "Verify the validity of any email address",
+    icon: "✉️",
+  },
+  {
+    title: "Keyword search",
+    description: "Find websites by keyword",
+    icon: "🔎",
+  },
+  {
+    title: "Website alerts",
+    description: "Monitor websites for technology changes",
+    icon: "🔔",
+  },
+  {
+    title: "Apps",
+    description: "Connect this service to the apps you use",
+    icon: "📱",
+  },
+];
 
 export const carouselData = [
   {
@@ -25,9 +58,9 @@ export const carouselData = [
     description: 'Shoot with Sony a6000',
   },
   {
-    imgSrc: '/img-1.png', 
-    title: 'Adventures in the Mountains', 
-    description: 'Shoot with Sony a6000' 
+    imgSrc: '/img-1.png',
+    title: 'Adventures in the Mountains',
+    description: 'Shoot with Sony a6000'
   }
 ];
 
