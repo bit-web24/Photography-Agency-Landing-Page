@@ -1,4 +1,5 @@
-// NAVIGATION
+import { lookup } from "dns";
+
 export const NAV_LINKS = [
 
   { href: '/', key: 'home', label: 'Home' },
@@ -13,33 +14,57 @@ export const products = [
     title: "Technology lookup",
     description: "Find out what websites are built with",
     icon: "🔍",
-  },
-  {
-    title: "Lead lists",
-    description: "Create a list of sites for a technology, keyword, or domain",
-    icon: "📑",
-  },
-  {
-    title: "Email verification",
-    description: "Verify the validity of any email address",
-    icon: "✉️",
-  },
-  {
-    title: "Keyword search",
-    description: "Find websites by keyword",
-    icon: "🔎",
+    links: "/technology-lookup",
   },
   {
     title: "Website alerts",
     description: "Monitor websites for technology changes",
     icon: "🔔",
+    links: "/website-alerts",
+  },
+  {
+    title: "Keyword search",
+    description: "Find websites by keyword",
+    icon: "🔎",
+    links: "/keyword-search",
+  },
+  {
+    title: "UI Templates",
+    description: "Browse a collection of customizable templates",
+    icon: "🎨",
+    links: "/ui-templates",
+    subProducts: [
+      {
+        title: "Hospital UI",
+        description: "UI templates for hospital management systems",
+        links: "/ui-templates/hospital",
+      },
+      {
+        title: "Restaurant UI",
+        description: "UI templates for restaurant management",
+        links: "/ui-templates/restaurant",
+      },
+      {
+        title: "E-commerce UI",
+        description: "UI templates for e-commerce websites",
+        links: "/ui-templates/ecommerce",
+      }
+    ]
+  },
+  {
+    title: "Lead lists",
+    description: "Create a list of sites for a technology, keyword, or domain",
+    icon: "📑",
+    links: "/lead-list",
   },
   {
     title: "Apps",
     description: "Connect this service to the apps you use",
     icon: "📱",
+    links: "/apps",
   },
 ];
+
 
 export const carouselData = [
   {
