@@ -4,3 +4,11 @@ export interface Award {
     title: string;
     description: string;
 }
+
+export interface ProductProps {
+    product: {
+      title: string;
+      description: string;
+      icon: React.ReactNode;
+    };
+  }
