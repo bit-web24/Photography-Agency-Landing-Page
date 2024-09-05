@@ -164,7 +164,7 @@ const Navbar = () => {
 
       {/* Mobile Links */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center py-5 overflow-y-auto">
+        <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center py-5 overflow-y-auto flex justify-center items-center">
           <button
             className="absolute top-14 right-14 text-white focus:outline-none"
             onClick={handleMobileMenuToggle}
