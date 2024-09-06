@@ -16,6 +16,14 @@ body {
 }
 
 @layer utilities {
+  .card-title {
+    @apply text-2xl font-bold mb-2
+  }
+
+  .card-content {
+    @apply leading-7 text-gray-500
+  }
+
   .btn_white {
     @apply border-white bg-white px-8 py-3 text-green-50
   }
@@ -308,4 +316,26 @@ body {
   flex: 0 0 auto; 
 }
 
+/* .product-preview {
+  z-index: 50; /* Ensure this is higher than other elements */
+
+.product-preview {
+  position: absolute;
+  top: 70%; /* Adjust as necessary */
+  left: 32px;
+  width: 28rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  z-index: 50;
+}
+
+.mobile-product-preview {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  z-index: 50;
+}
 
