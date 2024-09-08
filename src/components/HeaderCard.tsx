@@ -16,35 +16,35 @@ const HeaderCard = () => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
         const maxScrollLeft = scrollWidth - clientWidth;
-
+  
         if (maxScrollLeft > 0) {
           const scrollFraction = scrollLeft / maxScrollLeft;
           setScrollProgress(scrollFraction * 100);
-
+  
           // Calculate the visible item index based on scroll position
-          const visibleItemIndex = Math.min(
-            Math.floor((scrollLeft / maxScrollLeft) * (totalItems - 1)),
-            totalItems - 1
-          );
-          setCurrentItemIndex(visibleItemIndex);
+          const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
+          const visibleItemIndex = Math.round(scrollLeft / itemWidth);
+  
+          // Ensure index is within bounds
+          setCurrentItemIndex(Math.min(Math.max(visibleItemIndex, 0), totalItems - 1));
         }
       }
     };
-
+  
     const carouselElement = carouselRef.current;
     if (carouselElement) {
       carouselElement.addEventListener("scroll", handleScroll);
       // Initial calculation
       handleScroll();
     }
-
+  
     return () => {
       if (carouselElement) {
         carouselElement.removeEventListener("scroll", handleScroll);
       }
     };
   }, [totalItems]);
-
+  
   const scrollToIndex = (index) => {
     if (carouselRef.current) {
       const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
@@ -56,7 +56,7 @@ const HeaderCard = () => {
   };
 
   return (
-    <>
+    <div className="hidden md:block"> {/* Hide on mobile and show on larger screens */}
       {/* Highlight section */}
       <div className="flex items-center justify-between w-full relative mb-4">
         <span className="text-sm font-medium text-white">
@@ -102,7 +102,7 @@ const HeaderCard = () => {
           ))}
         </CarouselContent>
       </Carousel>
-    </>
+    </div>
   );
 };
 
