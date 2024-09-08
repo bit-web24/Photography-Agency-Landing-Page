@@ -5,14 +5,14 @@ import Navbar from "@/components/Navbar";
 
 export default function Contribute() {
     return (
-        <div className="flex flex-col mx-11">
+        <div className="flex flex-col items-center">
             <Navbar />
             <div className="flex flex-col mt-20 mx-6 md:mx-24 items-center gap-20 text-white">
-                <div className="flex flex-col gap-5 text-center md:text-left w-2/3 max-w-7xl leading-10">
-                    <h1 className="text-[#363733] text-center text-7xl"><span className="text-gray-400">About Anamarhs</span> <br/> Crafting Exceptional Websites</h1>
+                <div className="flex flex-col gap-5 text-center md:text-left w-2/3 max-w-5xl leading-10">
+                    <h1 className="text-[#363733] text-center text-7xl"><span className="text-gray-400">About Anamarhs</span> <br /> Crafting Exceptional Websites</h1>
                     <p className="text-center text-xl leading-7 mt-10">Welcome to Anamarhs, your trusted software consultancy! Our dedicated team of professionals is committed to crafting beautiful and functional websites tailored precisely to meet your needs. Whether you're envisioning a sophisticated web application or a seamless digital solution, Anamarhs is here to turn your ideas into reality. Our innovative approach and user-friendly tools empower you to create cutting-edge applications effortlessly. Begin your journey with us today and transform your software visions into impactful digital experiences!</p>
                 </div>
-                <div className="flex flex-col gap-24">
+                <div className="flex flex-col gap-24 max-w-7xl">
                     <h1 className="text-6xl font-semibold text-gray-300 text-center">Our Mission, Vision, and Values</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         <div>
@@ -41,7 +41,7 @@ export default function Contribute() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-24">
+                <div className="flex flex-col gap-24 max-w-7xl">
                     <h1 className="text-6xl font-semibold text-gray-300 text-center">Why Choose Us?</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         <div>
@@ -62,7 +62,7 @@ export default function Contribute() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-5 mb-10">
+                <div className="flex flex-col gap-5 mb-10 mx-w-7xl">
                     <h1 className="text-6xl font-semibold text-gray-300 text-center">Contributors</h1>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import Contact from './Contact';
 
 const Footer = () => {
   return (
-    <div className="max-w-full py-10">
+    <div className="py-10 w-full max-w-7xl">
       <div className="bg-[#363733] text-gray-300 sm:px-5 py-5 rounded-2xl">
         <Contact />
         <div className="px-4 sm:px-6 lg:px-8">
