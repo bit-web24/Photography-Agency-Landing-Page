@@ -1,8 +1,7 @@
 import { Button, Tag } from "@/components/ui/WorkButton";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardOverlay, Headline } from "@/components/ui/WorkCard";
-import { MdArrowForward } from "react-icons/md";
-import { WorkCards } from "../../constants";
 import Link from "next/link";
+import { WorkCards } from "../../constants";
 
 export default function Work() {
   return (
@@ -21,9 +20,6 @@ export default function Work() {
           </CardDescription>
           <div className="buttons flex flex-row">
             <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
-            <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
-              <MdArrowForward size={24} color="#000000" />
-            </button>
           </div>
         </div>
       </div>
@@ -31,7 +27,7 @@ export default function Work() {
       {/* Card Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* First Card */}
-        <Card variant="large" className="relative overflow-hidden rounded-2xl">
+        <Card variant="large" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
           <img
             src={WorkCards[0].image}
             alt={WorkCards[0].title}
@@ -50,7 +46,7 @@ export default function Work() {
               <CardDescription>{WorkCards[0].description}</CardDescription>
             </CardHeader>
             <CardFooter className="justify-center">
-              <Link href="/Card1">
+              <Link href={`/more-details`}>
                 <Button variant="outline" className="text-white hover:bg-white hover:text-black">
                   More Details <span className="ml-4 lg:ml-52 xl:ml-80">&gt;</span>
                 </Button>
@@ -59,61 +55,36 @@ export default function Work() {
           </CardOverlay>
         </Card>
 
-        {/* Second Card */}
-        <Card variant="medium" className="relative overflow-hidden rounded-2xl">
-          <img
-            src={WorkCards[1].image}
-            alt={WorkCards[1].title}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <CardOverlay>
-            <CardHeader>
-              {WorkCards[1].tags && (
-                <div className="absolute top-2 pl-8 right-2 mt-2 flex gap-2 flex-wrap justify-end cursor-pointer">
-                  {WorkCards[1].tags.map((tag, i) => (
-                    <Tag key={i} className="mr-2">{tag}</Tag>
-                  ))}
-                </div>
-              )}
-              <CardTitle>{WorkCards[1].title}</CardTitle>
-            </CardHeader>
-            <CardFooter className="justify-center">
-              <Link href="/Card2">
-                <Button variant="ghost">
-                  More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
-                </Button>
-              </Link>
-            </CardFooter>
-          </CardOverlay>
-        </Card>
-
-        {/* Third Card */}
-        <Card variant="medium" className="relative overflow-hidden rounded-2xl">
-          <img
-            src={WorkCards[2].image}
-            alt={WorkCards[2].title}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <CardOverlay>
-            <CardHeader>
-              {WorkCards[2].tags && (
-                <div className="absolute top-2 pl-8 right-2 mt-2 flex gap-2 flex-wrap justify-end cursor-pointer">
-                  {WorkCards[2].tags.map((tag, i) => (
-                    <Tag key={i} className="mr-2">{tag}</Tag>
-                  ))}
-                </div>
-              )}
-              <CardTitle>{WorkCards[2].title}</CardTitle>
-            </CardHeader>
-            <CardFooter className="justify-center">
-              <Link href="/Card3">
-                <Button variant="ghost">
-                  More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
-                </Button>
-              </Link>
-            </CardFooter>
-          </CardOverlay>
-        </Card>
+        {/* Other Cards */}
+        {WorkCards.slice(1).map((card, index) => (
+          <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
+            <img
+              src={card.image}
+              alt={card.title}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <CardOverlay>
+              <CardHeader>
+                {/* Render Tags for the Other Cards */}
+                {card.tags && (
+                  <div className="absolute top-2 pl-8 right-2 mt-2 flex gap-2 flex-wrap justify-end cursor-pointer">
+                    {card.tags.map((tag, i) => (
+                      <Tag key={i} className="mr-2">{tag}</Tag>
+                    ))}
+                  </div>
+                )}
+                <CardTitle>{card.title}</CardTitle>
+              </CardHeader>
+              <CardFooter className="justify-center">
+                <Link href={`/more-details`}>
+                  <Button variant="ghost">
+                    More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
+                  </Button>
+                </Link>
+              </CardFooter>
+            </CardOverlay>
+          </Card>
+        ))}
       </div>
     </section>
   );

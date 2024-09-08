@@ -7,7 +7,7 @@ import { carouselData } from "../../constants";
 const HeaderCard = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalItems = carouselData.length;
 
@@ -16,47 +16,48 @@ const HeaderCard = () => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
         const maxScrollLeft = scrollWidth - clientWidth;
-  
+
         if (maxScrollLeft > 0) {
           const scrollFraction = scrollLeft / maxScrollLeft;
           setScrollProgress(scrollFraction * 100);
-  
-          // Calculate the visible item index based on scroll position
-          const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
-          const visibleItemIndex = Math.round(scrollLeft / itemWidth);
-  
-          // Ensure index is within bounds
-          setCurrentItemIndex(Math.min(Math.max(visibleItemIndex, 0), totalItems - 1));
+
+          const visibleItemIndex = Math.min(
+            Math.floor((scrollLeft / maxScrollLeft) * (totalItems - 1)),
+            totalItems - 1
+          );
+          setCurrentItemIndex(visibleItemIndex);
         }
       }
     };
-  
+
     const carouselElement = carouselRef.current;
+    const handleResize = () => handleScroll();
+
+    const handleImageLoad = () => {
+      handleScroll(); 
+    };
+
     if (carouselElement) {
       carouselElement.addEventListener("scroll", handleScroll);
-      // Initial calculation
-      handleScroll();
+      window.addEventListener("resize", handleResize);
+
+      const images = carouselElement.querySelectorAll("img");
+      images.forEach((img) => img.addEventListener("load", handleImageLoad));
     }
-  
+
+    // Initial scroll calculation
+    handleScroll();
+
     return () => {
       if (carouselElement) {
         carouselElement.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("resize", handleResize);
       }
     };
   }, [totalItems]);
-  
-  const scrollToIndex = (index) => {
-    if (carouselRef.current) {
-      const itemWidth = carouselRef.current.querySelector(".carousel-item").offsetWidth;
-      carouselRef.current.scrollTo({
-        left: itemWidth * index,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
-    <div className="hidden md:block"> {/* Hide on mobile and show on larger screens */}
+    <>
       {/* Highlight section */}
       <div className="flex items-center justify-between w-full relative mb-4">
         <span className="text-sm font-medium text-white">
@@ -67,9 +68,7 @@ const HeaderCard = () => {
           {/* Highlight bar */}
           <div
             className="absolute bg-white h-[2px] rounded-full transition-all duration-300"
-            style={{
-              width: `${scrollProgress}%`,
-            }}
+            style={{ width: `${scrollProgress}%` }}
           />
         </div>
         <span className="text-sm font-medium text-white">
@@ -78,21 +77,21 @@ const HeaderCard = () => {
       </div>
 
       {/* Carousel */}
-      <Carousel opts={{ align: "start" }} className="w-full max-w-[350px] h-44">
+      <Carousel opts={{ align: "start" }} className="w-full max-w-[250px] md:max-w-[350px] h-44">
         <CarouselContent ref={carouselRef} className="carousel-container flex space-x-2">
           {carouselData.map((item, index) => (
-            <CarouselItem key={index} className="w-[350px] flex-shrink-0 carousel-item">
+            <CarouselItem key={index} className="w-[250px] md:w-[350px] flex-shrink-0 carousel-item">
               <div className="flex flex-col md:flex-row p-2 rounded-md h-32 btn_white cursor-pointer">
                 {/* Image on the left side */}
                 <div className="flex-shrink-0">
                   <img
                     src={item.imgSrc}
-                    alt={`Image ${index + 1}`}
+                    alt={`Image ${index + 1}: ${item.title}`}
                     className="aspect-square w-[98px] h-[98px] rounded-lg object-cover"
+                    loading="lazy" // Lazy load the images
                   />
                 </div>
 
-                {/* Text on the right side */}
                 <div className="flex flex-col justify-center ml-4 h-full">
                   <h2 className="text-lg font-medium mb-1">{item.title}</h2>
                   <p className="mt-4 text-white">{item.description}</p>
@@ -102,7 +101,7 @@ const HeaderCard = () => {
           ))}
         </CarouselContent>
       </Carousel>
-    </div>
+    </>
   );
 };
 
