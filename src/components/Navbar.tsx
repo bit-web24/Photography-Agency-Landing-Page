@@ -40,7 +40,7 @@ const Navbar = () => {
   }, [isProductPreviewOpen]);
 
   return (
-    <nav className="flexBetween max-container px-10 py-5 relative top-0 left-0 right-0 z-50 bg-gradient-to-b from-transparent to-transparent">
+    <nav className="flexBetween xl:space-x-28 space-x-2 max-container px-10 py-5 relative top-0 left-0 right-0 z-50 bg-gradient-to-b from-transparent to-transparent">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <img src="/logo.png" alt="CeelestialUI" className="rounded-2xl w-12 h-12" />
