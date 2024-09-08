@@ -12,45 +12,44 @@ const Header = () => {
           shutterspeed
         </h1>
         <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-44">
-  {/* First Row of Buttons */}
-  <div className="flex flex-wrap gap-2 sm:gap-3">
-    <HeaderButton 
-      type="button" 
-      title="Landscape" 
-      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
-    />
-    <HeaderButton 
-      type="button" 
-      title="Wildlife" 
-      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
-    />
-  </div>
-  
-  {/* Second Row of Buttons */}
-  <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
-    <HeaderButton 
-      type="button" 
-      title="Architectural" 
-      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
-    />
-    <HeaderButton 
-      type="button" 
-      title="Travel" 
-      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
-    />
-    <HeaderButton 
-      type="button" 
-      title="Portrait" 
-      variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1" 
-    />
-  </div>
-</div>
+          {/* First Row of Buttons */}
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            <HeaderButton
+              type="button"
+              title="Landscape"
+              variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1"
+            />
+            <HeaderButton
+              type="button"
+              title="Wildlife"
+              variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1"
+            />
+          </div>
 
+          {/* Second Row of Buttons */}
+          <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
+            <HeaderButton
+              type="button"
+              title="Architectural"
+              variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1"
+            />
+            <HeaderButton
+              type="button"
+              title="Travel"
+              variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1"
+            />
+            <HeaderButton
+              type="button"
+              title="Portrait"
+              variant="btn_white_text transform transition-all duration-500 ease-in-out hover:bg-white hover:text-[#7f7f81] hover:scale-105 hover:translate-y-1"
+            />
+          </div>
+        </div>
       </div>
-      
-      <div className="mt-80">
+
+      {/* <div className="mt-80">
         <HeaderCard />
-      </div>
+      </div> */}
     </section>
   );
 };
