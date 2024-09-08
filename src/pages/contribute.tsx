@@ -3,6 +3,13 @@ import './../app/globals.css';
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
+const contributors = [
+    { name: "Krishna", img: "/contributors/krishna.jpg" },
+    { name: "Shivam", img: "/contributors/shivam.jpg" },
+    { name: "Raushan", img: "/contributors/raushan.jpg" },
+    { name: "Bittu", img: "/contributors/bittu.jpg" },
+];
+
 export default function Contribute() {
     return (
         <div className="flex flex-col items-center">
@@ -62,8 +69,16 @@ export default function Contribute() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-5 mb-10 mx-w-7xl">
+                <div className="flex flex-col gap-5 mb-10 mx-w-7xl w-full">
                     <h1 className="text-6xl font-semibold text-gray-300 text-center">Contributors</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-20 mb-20">
+                        {contributors.map((conrtibutor, index) => (
+                            <div key={index} className="flex flex-col items-center">
+                                <img src={conrtibutor.img} className=" rounded-xl  h-72" />
+                                <h1 className="text-white text-center mt-5 text-2xl"> { conrtibutor.name } </h1>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <Footer />
