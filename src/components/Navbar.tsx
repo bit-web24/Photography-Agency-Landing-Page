@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [isProductPreviewOpen]);
 
   return (
-    <nav className="flexBetween max-w-screen-xl mx-auto px-5 lg:px-10 py-5 relative top-0 left-0 right-0 z-50 bg-gradient-to-b from-transparent to-transparent">
+    <nav className="flexBetween max-w-screen-xl mx-auto px-5 lg:px-10 py-5 relative top-0 left-0 right-0 z-50  bg-gradient-to-b from-transparent to-transparent">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <img src="/logo.png" alt="CeelestialUI" className="rounded-2xl w-12 h-12" />
@@ -47,40 +47,42 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <ul className="hidden lg:flex gap-4 items-center rounded-full bg-[#bebebedc] p-3 px-4 ml-10">
-        {NAV_LINKS.map((link, index) => (
-          <li key={link.key} className="flex items-center relative">
-            <Link
-              href={link.href}
-              className="pr-5 text-[#1C1A1F] hover:text-[#7f7f81] cursor-pointer flex items-center"
-              onClick={() => handleLinkClick(link.key)}
-            >
-              {link.label}
-              {link.key === "Products" && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`h-4 w-4 ml-1 transition-transform ${
-                    isProductPreviewOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              )}
-            </Link>
-            {index < NAV_LINKS.length - 1 && (
-              <div className="w-[1px] h-6 bg-[#d1d0d0] mx-2"></div>
-            )}
-          </li>
-        ))}
-      </ul>
+      <ul className="hidden lg:flex gap-4 items-center rounded-full bg-[#bebebedc] p-3 px-4 lg:ml-10">
+  {NAV_LINKS.map((link, index) => (
+    <li key={link.key} className="flex items-center relative">
+      <Link
+        href={link.href}
+        className="pr-5 text-[#1C1A1F] hover:text-[#7f7f81] cursor-pointer flex items-center"
+        onClick={() => handleLinkClick(link.key)}
+      >
+        {link.label}
+        {link.key === "Products" && (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={`h-4 w-4 ml-1 transition-transform ${
+              isProductPreviewOpen ? "rotate-180" : ""
+            }`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        )}
+      </Link>
+      {/* Divider between links */}
+      {index < NAV_LINKS.length - 1 && (
+        <div className="w-[1px] h-6 bg-[#d1d0d0] mx-2"></div>
+      )}
+    </li>
+  ))}
+</ul>
+
 
       {/* Product Preview */}
       {isProductPreviewOpen && (
@@ -90,7 +92,7 @@ const Navbar = () => {
       )}
 
       {/* BOOK A CALL button */}
-      <div className="lg:flex hidden items-center">
+      <div className="lg:flex hidden items-center ml-11">
         <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
       </div>
 
