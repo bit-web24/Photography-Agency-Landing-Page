@@ -34,9 +34,9 @@ const Expertise = () => {
               </div>
             </div>
 
-            <div className="md:w-1/5 w-full mt-8">
-              <ul className="leading-10 text-2xl">
-                <li>Landscapes</li>
+            <div className=" md:w-1/5 w-full mt-8">
+              <ul className="text-[#838282] leading-10 text-2xl">
+                <li className="text-white">Landscapes</li>
                 <li>WildLife</li>
                 <li>Architectural</li>
                 <li>Travel</li>
@@ -44,22 +44,32 @@ const Expertise = () => {
               </ul>
             </div>
           </div>
-          <div className="md:mt-3 mt-2 grid grid-cols-4">
-            <div className="md:col-span-1 col-span-4">
-              <div className="relative top-[60%]">
+          <div className=" md:mt-3 mt-2 grid grid-cols-4">
+            <div className=" md:col-span-1 col-span-4">
+              <div className=" relative top-[70%]">
                 <p className="text-[24px]">
                   Chasing Clouds at Mont Blanc's Pinnacle.
                 </p>
-                <p className="address text-[16px]">Mont Blanc, France</p>
+                <p className="address text-[16px] text-[#9c9c9c]">Mont Blanc, France</p>
               </div>
             </div>
-            <div className="md:col-span-3 col-span-4 mt-12">
-              <Carousel opts={{ align: "start" }} className="w-full">
+            <div className="md:col-span-3 col-span-4 md:mt-8 mt-16">
+
+              <Carousel
+                opts={{
+                  align: "start",
+                }}
+                className="w-full"
+              >
                 <CarouselContent>
                   {images.map((data, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="">
-                        <Card className="transform transition-transform duration-300 hover:scale-105">
+                    <CarouselItem
+                      key={index}
+                      className=" "
+                    >
+                      <div className="p-1">
+                      
+                        <Card>
                           <CardContent className="flex aspect-square items-center justify-center p-2">
                             <img src={data} className="h-full w-full rounded-xl" />
                           </CardContent>
