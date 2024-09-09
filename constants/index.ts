@@ -1,12 +1,13 @@
-// NAVIGATION
+import { lookup } from "dns";
+
 export const NAV_LINKS = [
-  
-    { href: '/', key: 'home', label: 'Home' },
-    
-    { href: '/', key: 'Product', label: 'Product' },
-    { href: '/Contribute', key: 'About', label: 'About' },
-    { href: '/', key: 'Template UI', label: 'Template UI' },
-  ];
+
+  { href: '/', key: 'home', label: 'Home' },
+
+  { href: '/', key: 'Products', label: 'Products' },
+  { href: '/about', key: 'About', label: 'About' },
+  { href: '/', key: 'Template UI', label: 'Template UI' },
+];
 
 export const carouselData = [
   {
@@ -25,9 +26,9 @@ export const carouselData = [
     description: 'Shoot with Sony a6000',
   },
   {
-    imgSrc: '/img-1.png', 
-    title: 'Adventures in the Mountains', 
-    description: 'Shoot with Sony a6000' 
+    imgSrc: '/img-1.png',
+    title: 'Adventures in the Mountains',
+    description: 'Shoot with Sony a6000'
   }
 ];
 

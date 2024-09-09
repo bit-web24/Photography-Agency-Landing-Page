@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,37 +7,28 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { MdArrowRightAlt } from "react-icons/md";
 
-
-
 const Expertise = () => {
-
-  // image url 
+  // image urls
   const images = [
     "https://images.unsplash.com/photo-1590053404184-ce4ee04f3d58?q=80&w=1616&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1541414779316-956a5084c0d4?q=80&w=1614&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  ]
-
-
-
+  ];
 
   return (
     <>
       <div className="gap-20 py-10">
         <div className="bg-[#363733] text-gray-300 md:ps-10 ps-4 py-7 rounded-2xl">
-          <div className=" flex md:flex-row flex-col">
+          <div className="flex md:flex-row flex-col">
             <div className="md:w-4/5 w-full text-left">
               <p>(02)</p> 
               <p>Our Expertise</p>
-              <div className=" text-3xl md:w-[40%] w-full">
+              <div className="text-3xl md:w-[40%] w-full">
                 When moments captured every dreams crafted into beautiful
                 reality
               </div>
@@ -81,7 +71,7 @@ const Expertise = () => {
                       
                         <Card>
                           <CardContent className="flex aspect-square items-center justify-center p-2">
-                              <img src={data} className="h-full w-full rounded-xl"/>
+                            <img src={data} className="h-full w-full rounded-xl" />
                           </CardContent>
                         </Card>
                       </div>
@@ -92,8 +82,11 @@ const Expertise = () => {
                 <CarouselNext />
               </Carousel>
 
-              <div className="mt-12  flex flex-row align-middle ">
-                <span className="text-[25px]">See all</span> <span><MdArrowRightAlt className="h-10 w-16" /></span>
+              <div className="mt-12 flex flex-row align-middle">
+                <span className="text-[25px]">See all</span>
+                <span>
+                  <MdArrowRightAlt className="h-10 w-16" />
+                </span>
               </div>
             </div>
           </div>

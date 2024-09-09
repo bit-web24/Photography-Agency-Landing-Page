@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { NAV_LINKS } from "../../constants";
 import Link from "next/link";
-import Button from "./ui/HeaderButton";
+import ButtonForm from "./ButtonForm";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,41 +22,25 @@ const Navbar = () => {
 
       {/* Desktop Links */}
       <ul className="hidden lg:flex gap-6 items-center rounded-full bg-[#bebebedc] p-3 px-4">
-        {NAV_LINKS.map((link, index) => (
-          <li key={link.key} className="flex items-center">
+        {NAV_LINKS.map((link) => (
+          <li key={link.key} className="flex items-center relative">
             <Link
               href={link.href}
-              className="pr-5 text-[#ffffff] hover:text-[#7f7f81] cursor-pointer"
+              className="pr-5 text-[#1C1A1F] hover:text-[#7f7f81] cursor-pointer flex items-center"
             >
               {link.label}
             </Link>
-            {/* Vertical line */}
-            {index < NAV_LINKS.length - 1 && (
-              <div className="w-[1px] h-6 bg-[#d1d0d0] mx-2"></div>
-            )}
+
+            <div className="w-[1px] h-6 bg-[#d1d0d0] mx-2"></div>
           </li>
         ))}
       </ul>
 
-      {/* Right Section */}
+      {/* BOOK A CALL button */}
       <div className="lg:flex hidden items-center">
-  <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
-  <div
-    className="relative w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      className="h-6 w-6 text-gray-800"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
-    </svg>
-  </div>
-</div>
-
-
+        <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
+        
+      </div>
 
       {/* Mobile Menu Button */}
       <div className="lg:hidden flex items-center">
@@ -120,20 +104,23 @@ const Navbar = () => {
               />
             </svg>
           </button>
+
           <ul className="flex flex-col items-center gap-6 mb-8">
             {NAV_LINKS.map((link) => (
               <li key={link.key} className="w-full text-center">
                 <Link
                   href={link.href}
                   className="block py-2 text-white hover:text-gray-300 transition-all"
+                  onClick={handleMobileMenuToggle}
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
+
           <div className="flex flex-col items-center gap-4">
-            <Button type="button" title="BOOK A CALL" variant="btn_dark_green" />
+            <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
             <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +140,6 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
     </nav>
   );
 };

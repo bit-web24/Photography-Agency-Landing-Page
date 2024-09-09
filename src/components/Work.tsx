@@ -1,6 +1,6 @@
 import { Button, Tag } from "@/components/ui/WorkButton";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardOverlay, Headline } from "@/components/ui/WorkCard";
-import { MdArrowForward } from "react-icons/md";
+import Link from "next/link";
 import { WorkCards } from "../../constants";
 
 export default function Work() {
@@ -20,9 +20,6 @@ export default function Work() {
           </CardDescription>
           <div className="buttons flex flex-row">
             <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
-            <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
-              <MdArrowForward size={24} color="#000000" />
-            </button>
           </div>
         </div>
       </div>
@@ -30,7 +27,7 @@ export default function Work() {
       {/* Card Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* First Card */}
-        <Card variant="large" className="relative overflow-hidden rounded-2xl">
+        <Card variant="large" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
           <img
             src={WorkCards[0].image}
             alt={WorkCards[0].title}
@@ -49,16 +46,18 @@ export default function Work() {
               <CardDescription>{WorkCards[0].description}</CardDescription>
             </CardHeader>
             <CardFooter className="justify-center">
-              <Button variant="outline" className="text-white hover:bg-white hover:text-black">
-                More Details <span className="ml-4 lg:ml-52 xl:ml-80">&gt;</span>
-              </Button>
+              <Link href={`/more-details`}>
+                <Button variant="outline" className="text-white hover:bg-white hover:text-black">
+                  More Details <span className="ml-4 lg:ml-52 xl:ml-80">&gt;</span>
+                </Button>
+              </Link>
             </CardFooter>
           </CardOverlay>
         </Card>
 
         {/* Other Cards */}
         {WorkCards.slice(1).map((card, index) => (
-          <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl">
+          <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
             <img
               src={card.image}
               alt={card.title}
@@ -77,9 +76,11 @@ export default function Work() {
                 <CardTitle>{card.title}</CardTitle>
               </CardHeader>
               <CardFooter className="justify-center">
-                <Button variant="ghost">
-                  More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
-                </Button>
+                <Link href={`/more-details`}>
+                  <Button variant="ghost">
+                    More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
+                  </Button>
+                </Link>
               </CardFooter>
             </CardOverlay>
           </Card>
