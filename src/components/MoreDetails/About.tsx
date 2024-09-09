@@ -12,8 +12,11 @@ const contributors = [
 
 export default function Contribute() {
     return (
+        
+        
+       
         <div className="flex flex-col items-center">
-            <Navbar />
+           <Navbar/>
             <div className="flex flex-col mt-20 mx-6 md:mx-24 items-center gap-20 text-white">
                 <div className="flex flex-col gap-5 text-center md:text-left w-2/3 max-w-5xl leading-10">
                     <h1 className="text-[#363733] text-center text-7xl"><span className="text-gray-400">About Anamarhs</span> <br /> Crafting Exceptional Websites</h1>
