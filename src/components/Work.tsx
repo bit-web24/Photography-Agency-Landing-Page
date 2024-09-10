@@ -46,7 +46,7 @@ export default function Work() {
               <CardDescription>{WorkCards[0].description}</CardDescription>
             </CardHeader>
             <CardFooter className="justify-center">
-              <Link href={`/more-details`}>
+              <Link href={WorkCards[0].link}>
                 <Button variant="outline" className="text-white hover:bg-white hover:text-black">
                   More Details <span className="ml-4 lg:ml-52 xl:ml-80">&gt;</span>
                 </Button>
@@ -76,7 +76,7 @@ export default function Work() {
                 <CardTitle>{card.title}</CardTitle>
               </CardHeader>
               <CardFooter className="justify-center">
-                <Link href={`/more-details`}>
+                <Link href={card.link}>
                   <Button variant="ghost">
                     More Details <span className="ml-4 md:ml-6 lg:ml-8">&gt;</span>
                   </Button>
