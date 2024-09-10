@@ -13,8 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes" />
+      </head>
       <body>
-        <main className="mx-auto w-[95%]">
+        <main className="mx-auto max-w-[1200px] w-full">
           {children}
         </main>
       </body>
