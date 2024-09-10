@@ -150,9 +150,9 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 ml-32">
             <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
-            <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
+            <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none mr-28">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
