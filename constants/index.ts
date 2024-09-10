@@ -36,21 +36,24 @@ export const WorkCards = [
   {
     image: "/card/card1.jpg",
     title: "Majestic Creatures of the African Savanna",
-    description:
-      "Capturing the exquisite patterns and dynamic energy of Africa’s most iconic big cat.",
+    description: "Capturing the exquisite patterns and dynamic energy of Africa’s most iconic big cat.",
     tags: ["Wildlife Portraits", "#Nature", "#Mammals", "#2022", "#Forest", "#2023", "#2024"],
+    link: "/Card1"  // Add unique link for the first card
   },
   {
     image: "/card/card2.jpg",
     title: "A Temple’s Serene Silhouette",
-    tags: ["#Nature", "#Architecture", "#2023", , "#2024"],
+    tags: ["#Nature", "#Architecture", "#2023", "#2024"],
+    link: "/Card2"  // Add unique link for the second card
   },
   {
     image: "/card/card3.jpg",
     title: "Moments Framed in Portraits",
     tags: ["#Portraits", "#Art", "#2023", "#Architecture"],
+    link: "/Card3"  // Add unique link for the third card
   },
 ];
+
 
 export const awardsData = [
   {
