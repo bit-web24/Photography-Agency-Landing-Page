@@ -6,7 +6,6 @@ const DropdownForm = () => {
     <form
       className="absolute mt-4 bg-gray-100 p-6 rounded-md shadow-md left-0 w-[343px] btn_white"
       style={{ top: '100%' }}
-      Validate 
     >
       <div className="mb-6 flex space-x-6">
         <div className="flex-1">

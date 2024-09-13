@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Headline, CardTitle, CardDescription } from "@/components/ui/WorkCard";
 import { MdArrowForward } from "react-icons/md";
 import { awardsData } from "../../constants";
-import { Award } from "../../constants/types"; // Adjust the path as necessary
+import { Award as AwardType } from "../../constants/types"; // Adjust the path as necessary
 
 const Award = () => {
-    const [selectedAward, setSelectedAward] = useState<Award>(awardsData[0]);
+    const [selectedAward, setSelectedAward] = useState<AwardType>(awardsData[0]);
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Track hovered index
 
-    const handleAwardClick = (award: Award, index: number) => {
+    const handleAwardClick = (award: AwardType, index: number) => {
         setSelectedAward(award);
         setHoveredIndex(null); // Reset hovered index when an award is selected
     };
